@@ -58,11 +58,12 @@ public class MessageService extends Message{
 
     
     public Message updateMessage(Message message, int message_id){
-         if(message.message_id != 0 && message.message_text != "" && message.message_text.length() <= 255){
-            System.out.println(message);
-            System.out.println(message_id);
+          if(message.message_text != "" && message.message_text.length() <= 255){
+            //System.out.println(messageDAO.updateMessage(message, message_id));
+            //System.out.println(message_id);
             
             return messageDAO.updateMessage(message, message_id);
+            
          }
          return null;
     }

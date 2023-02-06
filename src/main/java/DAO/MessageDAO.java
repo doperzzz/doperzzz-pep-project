@@ -123,8 +123,8 @@ public class MessageDAO {
             
             preparedStatement.executeUpdate();
 
-            System.out.println(message.getMessage_text());
-            System.out.println(message_id);
+            // System.out.println(message.getMessage_text());
+            // System.out.println(message_id);
             return getMessageByID(message_id);
         }
         catch (SQLException e){
@@ -151,7 +151,7 @@ public class MessageDAO {
                                    rs.getString("message_text"),
                                    rs.getLong("time_posted_epoch"));
                 messagesByAccountID.add(message);
-                System.out.println(messagesByAccountID);
+                //System.out.println(messagesByAccountID);
             }
 
         }
